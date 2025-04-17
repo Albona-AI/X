@@ -1,0 +1,12 @@
+{
+  "account_1": {
+    "part_number": 2,
+    "floating_ip_id": 86974382
+  },
+  "account_2": {
+    "floating_ip_id": 86974429
+  },
+  "account_3": {
+    "floating_ip_id": 86974432
+  }
+}

@@ -1,0 +1,5 @@
+tweepy==4.14.0
+twikit==2.3.3
+requests==2.28.1
+schedule==1.2.0
+python-dotenv==0.21.0
