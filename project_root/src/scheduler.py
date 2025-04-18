@@ -5,9 +5,9 @@ import os
 import asyncio
 
 
-from twitter_post import TwitterPostClient
-from twikit_actions import TwikitActions
-from twikit_fetch import TwikitFetcher
+from src.twitter_post import TwitterPostClient
+from src.twikit_actions import TwikitActions
+from src.twikit_fetch import TwikitFetcher
 
 
 ACCOUNT_INDICES = [1, 2, 3]

@@ -2,7 +2,7 @@
 import asyncio
 from datetime import datetime, timedelta
 from twikit import Client
-from hetzner_ip_manager import HetznerIPManager
+from src.hetzner_ip_manager import HetznerIPManager
 
 
 class TwikitFetcher:
@@ -20,9 +20,7 @@ class TwikitFetcher:
 
     async def login(self):
         try:
-            self.client.username = self.username
-            self.client.password = self.password
-            await self.client.login()
+            await self.client.login(auth_info_1=self.username, password=self.password)
             print(f"[Fetcher] Account {self.account_index} logged in.")
         except Exception as e:
             print(f"[Fetcher] login failed: {e}")
