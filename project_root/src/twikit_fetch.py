@@ -2,7 +2,7 @@
 import asyncio
 from datetime import datetime, timedelta
 from twikit import Client
-from hetzner_ip_manager import HetznerIPManager
+from src.hetzner_ip_manager import HetznerIPManager
 
 
 class TwikitFetcher:

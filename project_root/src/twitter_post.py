@@ -1,8 +1,8 @@
 
 import os
 import tweepy
-from accounts_config import AccountStateManager
-from hetzner_ip_manager import HetznerIPManager
+from src.accounts_config import AccountStateManager
+from src.hetzner_ip_manager import HetznerIPManager
 
 
 class TwitterPostClient:
@@ -15,8 +15,8 @@ class TwitterPostClient:
         ip_addr = self.hetzner_manager.get_ip_for_account(account_index)
         print(f"[TwitterPostClient] Using Hetzner Floating IP {fip_id} / IP={ip_addr} for account {account_index}")
 
-        api_key = os.getenv("TWITTER_API_KEY")
-        api_secret = os.getenv("TWITTER_API_KEY_SECRET")
+        api_key = os.getenv(f"TWITTER_API_KEY_{account_index}")
+        api_secret = os.getenv(f"TWITTER_API_KEY_SECRET_{account_index}")
         access_token = os.getenv(f"TWITTER_ACCESS_TOKEN_{account_index}")
         access_secret = os.getenv(f"TWITTER_ACCESS_TOKEN_SECRET_{account_index}")
         auth = tweepy.OAuth1UserHandler(api_key, api_secret, access_token, access_secret)
