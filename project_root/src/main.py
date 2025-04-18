@@ -3,8 +3,8 @@ import os
 import sys
 from dotenv import load_dotenv
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from scheduler import start_scheduler
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.scheduler import start_scheduler
 
 
 def main():

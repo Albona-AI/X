@@ -20,9 +20,7 @@ class TwikitActions:
 
     async def login(self):
         try:
-            self.client.username = self.username
-            self.client.password = self.password
-            await self.client.login()
+            await self.client.login(auth_info_1=self.username, password=self.password)
             print(f"[TwikitActions] Account {self.account_index} logged in.")
         except Exception as e:
             print(f"[TwikitActions] Account {self.account_index} login failed: {e}")
